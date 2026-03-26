@@ -247,6 +247,7 @@ class Stack(Stateful):
             self.bla = BaseLevel(f"{name}.bla", p, v, self.chunks.c)
             self.buffer = Buffer(f"{name}.buffer", p, m, b, v, self.chunks.c, v)
             self.controller = Controller(f"{name}.controller", a, s,
+                stage=self.start_stage,
                 push=self.start_push, 
                 pop=self.start_pop,
                 flush=self.start_flush)
